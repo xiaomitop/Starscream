@@ -114,6 +114,7 @@ FrameCollectorDelegate, HTTPHandlerDelegate {
     // MARK: - TransportEventClient
     
     public func connectionChanged(state: ConnectionState) {
+        print("----------------------------------connectionChanged: \(state)")
         switch state {
         case .connected:
             secKeyValue = HTTPWSHeader.generateWebSocketKey()

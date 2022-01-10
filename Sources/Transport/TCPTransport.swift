@@ -98,6 +98,7 @@ public class TCPTransport: Transport {
     }
     
     private func start() {
+        print("----------------------------------start")
         guard let conn = connection else {
             return
         }
