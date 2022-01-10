@@ -103,6 +103,7 @@ public class TCPTransport: Transport {
             return
         }
         conn.stateUpdateHandler = { [weak self] (newState) in
+            print("----------------------------------newState: \(newState)")
             switch newState {
             case .ready:
                 self?.delegate?.connectionChanged(state: .connected)
